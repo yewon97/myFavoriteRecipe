@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box; /* 디폴트값 */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+table {
+  /* 셀간의 공간을 없애줌 - 디폴트값 */
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+table td {
+  border-left: 1px dotted #3a5a40;
+}
+
+table td:first-child {
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+}
+
+table th {
+  border-left: 1px dotted #3a5a40;
+  font-size: 1.4rem;
+  border-bottom: 2.5px solid #3a5a40;
+}
+
+table th:first-child {
+  border-left: none;
+}
+
+thead>tr:first-child {
+  background-color: #a3b18a4f;
+}
+
+body {
+  margin: 0 auto;
+  width: 1000px;
+  background-image: url("https://cdn.pixabay.com/photo/2017/10/22/21/41/turmeric-2879382_1280.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  background-color: #3a5a40;
+  color: #fdf9ec;
+  padding-left: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+/* article */
+  /* width: calc(100% - 1rem - 200px); */
+  /* float: left; */
+  /* margin-right: 1rem;} */
+
+section p {
+  padding-left: 1rem;
+  font-size: 1.3em;
+  margin: 0.5rem;
+}
+
+.menuBg {
+  background-color: #fdf9ec;
+  border: 1px solid #a3b18a;
+  scroll-margin-top: 6.5rem;
+}
+
+section h2 {
+  background-color: #588157;
+  padding-left: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 a {
+  color: #fdf9ec;
+}
+h2 a:hover::after {
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  content: '누르면 "만개의 레시피"사이트로 이동합니다.';
+}
+
+section h3 {
+  background-color: #a3b18a;
+  color: #252b26;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+aside {
+  left: calc((100% - 1000px)/2 + 1rem + 1000px);
+  position: fixed;
+  float: right;
+  top: 12.3rem;
+  /* scroll-margin-top: 1rem; */
+}
+
+aside .recommend {
+  width: 150px;
+  background-color: #fdf9ec;
+  height: auto;
+  border: 1px solid #a3b18a;
+}
+/* aside img {
+  display: block;
+  margin: 2rem 0.5rem;
+  width: calc(100% - 1rem);
+} */
+aside h4 {
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0.5rem;
+  color: #fdf9ec;
+  background-color: #3a5a40;
+}
+
+aside .aside_links {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.aside_links a {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.aside_links img {
+  width: 130px; 
+}
+
+.goup {
+  font-size: 1.5rem;
+  display: block;
+  margin-left: 25%;
+  margin-bottom: 0.5rem;
+}
+
+.aside_icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.aside_icons i {
+  color: #3a5a40;
+  font-size: 25px;
+}
+
+.recipelist {
+  font-size: 1.5rem;
+  color: #3a5a40;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+nav {
+  background-color: #fdf9ec;
+  border: 1px solid #a3b18a;
+  margin-bottom: 0.5rem;
+  position: sticky;
+  top: -0.1rem;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav div {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+nav li {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+nav li:not(:nth-child(1)) {
+  margin-left: 8rem;
+}
+
+nav a {
+  color: #3a5a40;
+  font-size: 1.3rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a:active {
+  background-color: #a3b18a4f;
+}
+
+p::first-letter {
+  font-size: 1.9rem;
+  color: #3a5a40;
+  font-weight: 700;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  padding-left: 2rem;
+  margin-right: 0.5rem;
+}
+ol>li {
+  counter-increment: rint;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+}
+ol>li::before {
+  content: counter(rint);
+  background-color: #a3b18a;
+  color: #fdf9ec;
+  width: 2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: -2.5rem;
+}
+
+hr {
+  border: 2px dashed #3a5a40;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+section td {
+  border-bottom: 1px dotted #3a5a40;
+}
+
+section img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  clear: both;
+}
+
+th:first-child, td:first-child {
+  width: 50%;
+}
+
+/* .goup {
+  margin: 0 35%;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+  width: 300px;
+  border: 2px solid #a3b18a;
+  border-radius: 9px;
+  background-color: #fdf9ec;
+}
+
+.goup:hover::after {
+  content: "맨 위로";
+  font-size: 0.75rem;
+} */
